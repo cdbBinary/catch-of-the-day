@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import { render } from 'react-dom';
+import React from 'react';
+// import ReactDom from 'react-dom';
 import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {

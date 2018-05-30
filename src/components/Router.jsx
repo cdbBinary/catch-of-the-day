@@ -6,11 +6,11 @@ import NotFound from "./NotFound";
 
 const Router = () => (
 	<BrowserRouter>
-		<switch>
+		<Switch>
 			<Route exact path="/" component={StorePicker} />
 			<Route path="/store/:storeId" component={App} />
 			{ /*<Route component={NotFound}> */}
-		</switch>
+		</Switch>
 	</BrowserRouter>
 );
 
