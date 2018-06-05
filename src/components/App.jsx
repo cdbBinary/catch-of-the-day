@@ -10,11 +10,12 @@ class App extends React.Component {
 	};
 
  	addFish = fish => {
- 		// 1. Take a copy of the existing
+		// 1. Take a copy of the existing
  		const fishes = { ...this.state.fishes };
  		// 2. Add our new fish to that fishes variable
  		fishes[`fish${Date.now()}`] = fish;
- 		this.state.fishes.fish1 = fish;
+ 		// 3. Set the new fishes object to state
+ 		this.setState({ fishes });
  	};
 
 	render() {
@@ -24,7 +25,7 @@ class App extends React.Component {
 					<Header tagline="Fresh Seafood Market" />
 				</div>
 				<Order />
-				<Inventory addFish={this.addFish} />
+				<Inventory addFish={this.addFish}  />
 			</div>
 		);
 	}
